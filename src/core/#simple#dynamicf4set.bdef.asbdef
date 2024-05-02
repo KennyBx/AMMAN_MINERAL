@@ -1,0 +1,26 @@
+unmanaged implementation in class /simple/bp_dynamicf4set unique;
+//strict ( 2 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2))
+//and is prerequisite to be future proof regarding syntax and to be able to release your BO.
+
+//LD-0113 - 20231110 - Danh Tran - Start - Ins
+define behavior for /SIMPLE/DynamicF4Set alias DynamicF4Set
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+  //update;
+  //delete;
+  association _MDDYNAMIC { create; }
+}
+define behavior for /SIMPLE/MDDYNAMICSET alias MDDYNAMICSET
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+  //update;
+  //delete;
+//  field ( readonly ) tableName, fieldName, language, filter;
+}
+//LD-0113 - 20231110 - Danh Tran - End - Ins

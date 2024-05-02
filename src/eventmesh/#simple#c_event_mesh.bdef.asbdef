@@ -1,0 +1,44 @@
+unmanaged implementation in class /simple/bp_c_event_mesh unique;
+//strict ( 2 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
+
+define behavior for /SIMPLE/C_Event_Mesh alias EventMesh
+//persistent table /SIMPLE/API_LOG
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+
+  event Core1_SAPTestRunPassed parameter /SIMPLE/ABS_EVENT_MESH;
+  event Core1_SAPTestRunFailed parameter /SIMPLE/ABS_EVENT_MESH;
+  event Core1_SAPActivateFailed parameter /SIMPLE/ABS_EVENT_MESH;
+  event Core1_SAPActivated parameter /SIMPLE/ABS_EVENT_MESH;
+
+  event Core2_SAPTestRunPassed parameter /SIMPLE/ABS_EVENT_MESH;
+  event Core2_SAPTestRunFailed parameter /SIMPLE/ABS_EVENT_MESH;
+  event Core2_SAPActivateFailed parameter /SIMPLE/ABS_EVENT_MESH;
+  event Core2_SAPActivated parameter /SIMPLE/ABS_EVENT_MESH;
+
+  event Core3_SAPTestRunPassed parameter /SIMPLE/ABS_EVENT_MESH;
+  event Core3_SAPTestRunFailed parameter /SIMPLE/ABS_EVENT_MESH;
+  event Core3_SAPActivateFailed parameter /SIMPLE/ABS_EVENT_MESH;
+  event Core3_SAPActivated parameter /SIMPLE/ABS_EVENT_MESH;
+
+  event Core4_SAPTestRunPassed parameter /SIMPLE/ABS_EVENT_MESH;
+  event Core4_SAPTestRunFailed parameter /SIMPLE/ABS_EVENT_MESH;
+  event Core4_SAPActivateFailed parameter /SIMPLE/ABS_EVENT_MESH;
+  event Core4_SAPActivated parameter /SIMPLE/ABS_EVENT_MESH;
+
+  event Core5_SAPTestRunPassed parameter /SIMPLE/ABS_EVENT_MESH;
+  event Core5_SAPTestRunFailed parameter /SIMPLE/ABS_EVENT_MESH;
+  event Core5_SAPActivateFailed parameter /SIMPLE/ABS_EVENT_MESH;
+  event Core5_SAPActivated parameter /SIMPLE/ABS_EVENT_MESH;
+
+  event Core6_SAPTestRunPassed parameter /SIMPLE/ABS_EVENT_MESH;
+  event Core6_SAPTestRunFailed parameter /SIMPLE/ABS_EVENT_MESH;
+  event Core6_SAPActivateFailed parameter /SIMPLE/ABS_EVENT_MESH;
+  event Core6_SAPActivated parameter /SIMPLE/ABS_EVENT_MESH;
+
+}

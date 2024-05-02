@@ -1,0 +1,211 @@
+@AbapCatalog.sqlViewName: '/SIMPLE/CPRD'
+@AbapCatalog.compiler.compareFilter: true
+@AbapCatalog.preserveKey: true
+@AccessControl.authorizationCheck: #CHECK
+@EndUserText.label: 'Product'
+define root view /SIMPLE/C_Product
+  as select from /SIMPLE/I_Product as Product
+  composition [0..*] of /SIMPLE/C_ProductDescription   as _Description
+  composition [0..*] of /SIMPLE/C_ProductPlant         as _Plant
+  composition [0..*] of /SIMPLE/C_ProductSalesDelivery as _SalesDelivery
+  composition [0..*] of /SIMPLE/C_ProductSalesTax      as _ProductSalesTax
+  composition [0..1] of /SIMPLE/C_ProductSales         as _ProductSales
+  composition [0..1] of /SIMPLE/C_ProductQualityMgmt   as _ProductQualityMgmt
+  composition [0..1] of /SIMPLE/C_ProductProcurement   as _ProductProcurement
+  composition [0..*] of /SIMPLE/C_ProductBasicText     as _ProductBasicText
+  composition [0..*] of /SIMPLE/C_PrdUnitsOfMeasure    as _ProductUnitsOfMeasure
+  composition [0..1] of /SIMPLE/C_ProductStorage       as _ProductStorage
+  composition [0..*] of /SIMPLE/C_PrdInspectionText    as _ProductInspectionText
+  composition [0..*] of /SIMPLE/C_ProductPurchaseText  as _ProductPurchaseText
+  composition [0..*] of /SIMPLE/C_ProductValuation     as _Valuation
+  composition [0..*] of /SIMPLE/C_ProductWareHouse     as _ProductWareHouse
+  composition [0..*] of /SIMPLE/C_PrdClassification    as _Classification
+  composition [0..*] of /SIMPLE/C_ProductRevisionLevel as _RevisionLevel
+  composition [0..*] of /SIMPLE/C_Prdextendwarehouse   as _Prdextendwarehouse
+{
+  key Product                                           as product,
+      ProductType                                       as productType,
+      CrossPlantStatus                                  as crossPlantStatus,
+      CrossPlantStatusValidityDate                      as crossPlantStatusValidityDate,
+      //      @ObjectModel.readOnly: true
+      CreationDate                                      as creationDate,
+      //      @ObjectModel.readOnly: true
+      CreatedByUser                                     as createdByUser,
+      //      @ObjectModel.readOnly: true
+      LastChangeDate                                    as lastChangeDate,
+      //      @ObjectModel.readOnly: true
+      LastChangedByUser                                 as lastChangedByUser,
+      //      @ObjectModel.readOnly: true
+      LastChangeDateTime                                as lastChangeDateTime,
+      IsMarkedForDeletion                               as isMarkedForDeletion,
+      ProductOldID                                      as productOldID,
+      GrossWeight                                       as grossWeight,
+      PurchaseOrderQuantityUnit                         as purchaseOrderQuantityUnit,
+      SourceOfSupply                                    as sourceOfSupply,
+      WeightUnit                                        as weightUnit,
+      NetWeight                                         as netWeight,
+      CountryOfOrigin                                   as countryOfOrigin,
+      CompetitorID                                      as competitorID,
+      ProductGroup                                      as productGroup,
+      BaseUnit                                          as baseUnit,
+      IndustrySector                                    as industrySector,
+      ItemCategoryGroup                                 as itemCategoryGroup,
+      ProductHierarchy                                  as productHierarchy,
+      Division                                          as division,
+      VarblPurOrdUnitIsActive                           as varblPurOrdUnitIsActive,
+      VolumeUnit                                        as volumeUnit,
+      MaterialVolume                                    as materialVolume,
+      ANPCode                                           as anpCode,
+      Brand                                             as brand,
+      ProcurementRule                                   as procurementRule,
+      ValidityStartDate                                 as validityStartDate,
+      LowLevelCode                                      as lowLevelCode,
+      ProdNoInGenProdInPrepackProd                      as prodNoInGenProdInPrepackProd,
+      SerialIdentifierAssgmtProfile                     as serialIdentifierAssgmtProfile,
+      SizeOrDimensionText                               as sizeOrDimensionText,
+      IndustryStandardName                              as industryStandardName,
+      ProductStandardID                                 as productStandardID,
+      InternationalArticleNumberCat                     as internationalArticleNumberCat,
+      ProductIsConfigurable                             as productIsConfigurable,
+      IsBatchManagementRequired                         as isBatchManagementRequired,
+      ExternalProductGroup                              as externalProductGroup,
+      CrossPlantConfigurableProduct                     as crossPlantConfigurableProduct,
+      SerialNoExplicitnessLevel                         as serialNoExplicitnessLevel,
+      ProductManufacturerNumber                         as productManufacturerNumber,
+      ManufacturerNumber                                as manufacturerNumber,
+      ManufacturerPartProfile                           as manufacturerPartProfile,
+      QltyMgmtInProcmtIsActive                          as qltyMgmtInProcmtIsActive,
+      ChangeNumber                                      as changeNumber,
+      cast (MaterialRevisionLevel as char02)            as materialRevisionLevel,
+      HandlingIndicator                                 as handlingIndicator,
+      WarehouseProductGroup                             as warehouseProductGroup,
+      WarehouseStorageCondition                         as warehouseStorageCondition,
+      StandardHandlingUnitType                          as standardHandlingUnitType,
+      SerialNumberProfile                               as serialNumberProfile,
+      AdjustmentProfile                                 as adjustmentProfile,
+      PreferredUnitOfMeasure                            as preferredUnitOfMeasure,
+      IsPilferable                                      as isPilferable,
+      IsRelevantForHzdsSubstances                       as isRelevantForHzdsSubstances,
+      QuarantinePeriod                                  as quarantinePeriod,
+      TimeUnitForQuarantinePeriod                       as timeUnitForQuarantinePeriod,
+      QualityInspectionGroup                            as qualityInspectionGroup,
+      AuthorizationGroup                                as authorizationGroup,
+      HandlingUnitType                                  as handlingUnitType,
+      HasVariableTareWeight                             as hasVariableTareWeight,
+      MaximumPackagingLength                            as maximumPackagingLength,
+      MaximumPackagingWidth                             as maximumPackagingWidth,
+      MaximumPackagingHeight                            as maximumPackagingHeight,
+      UnitForMaxPackagingDimensions                     as unitForMaxPackagingDimensions,
+      ProductComposition                                as productComposition,
+      MsBookPartNumber                                  as msBookPartNumber,
+      Medium                                            as medium,
+      SegmentationStructure                             as segmentationStructure,
+      ReferencePrdForPackageBuilding                    as referencePrdForPackageBuilding,
+      ProductShape                                      as productShape,
+      ProductOrientationProfile                         as productOrientationProfile,
+      OverhangThreshold                                 as overhangThreshold,
+      BridgeThreshold                                   as bridgeThreshold,
+      MaximumSlopeForBridges                            as maximumSlopeForBridges,
+      AbsoluteHeightThreshold                           as absoluteHeightThreshold,
+      UomOfAbsHeightThreshold                           as uomOfAbsHeightThreshold,
+      PackagingMaterialType                             as packagingMaterialType,
+      AllowedPkgWeight                                  as allowedPkgWeight,
+      UnitOfWeight                                      as unitOfWeight,
+      AllowedPkgVolume                                  as allowedPkgVolume,
+      PackagingVolumeUnit                               as packagingVolumeUnit,
+      MaximumLevel                                      as maximumLevel,
+      StackabilityFactor                                as stackabilityFactor,
+      ExcessWtTolerance                                 as excessWtTolerance,
+      ExcessVolumeTol                                   as excessVolumeTol,
+      ClosedPackagMaterial                              as closedPackagMaterial,
+      cast ( MaturationTime as cmd_prd_maturity_dur_n ) as maturationTime,
+      ReqMaxShLife                                      as reqMaxShLife,
+      CatalogProfile                                    as catalogProfile,
+      LogisticsUom                                      as logisticsUom,
+      CatchweightRelevant                               as catchweightRelevant,
+      CwProfileForCwQty                                 as cwProfileForCwQty,
+      CatchWtToleranceGroup                             as catchWtToleranceGroup,
+      LaboratoryOrDesignOffice                          as laboratoryOrDesignOffice,
+      ProdAllocDetnProcedure                            as prodAllocDetnProcedure,
+      ProductDocumentChangeNumber                       as productDocumentChangeNumber,
+      ProductDocumentPageCount                          as productDocumentPageCount,
+      ProductDocumentPageNumber                         as productDocumentPageNumber,
+      OwnInventoryManagedProduct                        as ownInventoryManagedProduct,
+      DocumentIsCreatedByCAD                            as documentIsCreatedByCAD,
+      ProductionOrInspectionMemoTxt                     as productionOrInspectionMemoTxt,
+      ProductionMemoPageFormat                          as productionMemoPageFormat,
+      GlobalTradeItemNumberVariant                      as globalTradeItemNumberVariant,
+      ProductIsHighlyViscous                            as productIsHighlyViscous,
+      TransportIsInBulk                                 as transportIsInBulk,
+      ProdEffctyParamValsAreAssigned                    as prodEffctyParamValsAreAssigned,
+      ProdIsEnvironmentallyRelevant                     as prodIsEnvironmentallyRelevant,
+      PackagingMaterialGroup                            as packagingMaterialGroup,
+      ProductIsLocked                                   as productIsLocked,
+      DiscountInKindEligibility                         as discountInKindEligibility,
+      SmartFormName                                     as smartFormName,
+      PackingReferenceProduct                           as packingReferenceProduct,
+      BasicMaterial                                     as basicMaterial,
+      ProductDocumentNumber                             as productDocumentNumber,
+      ProductDocumentVersion                            as productDocumentVersion,
+      ProductDocumentType                               as productDocumentType,
+      ProductDocumentPageFormat                         as productDocumentPageFormat,
+      ProductConfiguration                              as productConfiguration,
+      DangerousGoodsIndProfile                          as dangerousGoodsIndProfile,
+      LastChangeTime                                    as lastChangeTime,
+      ProductUUID                                       as productUUID,
+      ProdSupChnMgmtUUID22                              as prodSupChnMgmtUUID22,
+      SegmentationStrategy                              as segmentationStrategy,
+      SegmentationIsRelevant                            as segmentationIsRelevant,
+      MaximumCapacity                                   as maximumCapacity,
+      OvercapacityTolerance                             as overcapacityTolerance,
+      IsApprovedBatchRecordReqd                         as isApprovedBatchRecordReqd,
+      //      PrdBrand                                          as prdBrand,
+      //      PrdForm                                           as prdForm,
+      //      PrdSegment                                        as prdSegment,
+      BaseUnitSpecificProductLength                     as baseUnitSpecificProductLength,
+      BaseUnitSpecificProductWidth                      as baseUnitSpecificProductWidth,
+      BaseUnitSpecificProductHeight                     as baseUnitSpecificProductHeight,
+      ProductMeasurementUnit                            as productMeasurementUnit,
+
+      --Change Number--
+      cast( '' as abap.char( 12 ) )                     as engineeringChangeManagement,
+      cast( '' as boolean )                             as generateRevisionLevel,
+      cast( '' as abap.char( 40 ) )                     as changeNumberObjectDescription,
+
+      /* SimpleMDG specific fields for integration */
+      cast( '' as abap.char( 10 ) )                     as action,
+      cast( '' as abap.char( 999 ) )                    as mdgMarkForChange,
+      cast( '' as abap.char( 36 ) )                     as mdgLogID,
+      cast( '' as abap.char( 20 ) )                     as actionMode,
+      cast( '' as abap.char( 20 ) )                     as activateID,
+      cast( '' as abap.char( 20 ) )                     as activateItemID,
+      cast( '' as abap.char( 20 ) )                     as crNumber,
+      cast( '' as abap.char( 20 ) )                     as crItem,
+       /* SimpleMDG specific fields for integration */
+      
+      
+      cast( '' as abap.char( 999 ) )                    as mdgKeyPrefix1,
+      cast( '' as abap.char( 999 ) )                    as mdgKeyPrefix2,
+      cast( '' as abap.char( 999 ) )                    as mdgKeyPrefix3,
+      cast( '' as abap.char( 999 ) )                    as mdgKeyPrefix4,
+      cast( '' as abap.char( 999 ) )                    as mdgKeyPrefix5,
+
+      /*Association*/
+      _Description,
+      _Plant,
+      _SalesDelivery,
+      _ProductSalesTax,
+      _ProductSales,
+      _ProductQualityMgmt,
+      _ProductProcurement,
+      _ProductBasicText,
+      _ProductUnitsOfMeasure,
+      _ProductStorage,
+      _ProductInspectionText,
+      _ProductPurchaseText,
+      _Valuation,
+      _ProductWareHouse,
+      _Classification,
+      _RevisionLevel,
+      _Prdextendwarehouse
+}

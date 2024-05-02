@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_NROB" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <ATTRIBUTES>
+    <OBJECT>/SIMPLE/BG</OBJECT>
+    <DOMLEN>NUMC2</DOMLEN>
+    <PERCENTAGE>99.9</PERCENTAGE>
+    <BUFFER>X</BUFFER>
+    <NOIVBUFFER>00000010</NOIVBUFFER>
+    <CHANGED_AT>20240111094204.278342</CHANGED_AT>
+    <CHANGED_BY>KBUI</CHANGED_BY>
+    <UNAME>DDIC</UNAME>
+    <UDATE>2023-03-09</UDATE>
+    <UTIME>02:37:53</UTIME>
+    <ENAME>DDIC</ENAME>
+    <EDATE>2023-03-27</EDATE>
+    <ETIME>04:08:31</ETIME>
+   </ATTRIBUTES>
+   <TEXT>
+    <LANGU>E</LANGU>
+    <OBJECT>/SIMPLE/BG</OBJECT>
+    <TXT>Simple Background Index</TXT>
+    <TXTSHORT>Simple Background</TXTSHORT>
+   </TEXT>
+  </asx:values>
+ </asx:abap>
+</abapGit>

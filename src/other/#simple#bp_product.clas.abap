@@ -1,0 +1,9 @@
+CLASS /simple/bp_product DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF /simple/c_product.
+
+ENDCLASS.
+
+
+
+CLASS /simple/bp_product IMPLEMENTATION.
+
+ENDCLASS.

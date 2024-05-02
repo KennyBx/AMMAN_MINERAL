@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/SIMPLE/PRD_SERVICE_PROVIDER</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>/simple/prd_service_provider</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_ML_DATA</CMPNAME>
+     <SCONAME>ET_MESSAGE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>MDG BS MAT: Material Error Message Table</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_ML_DATA</CMPNAME>
+     <SCONAME>IT_CKMLCR</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>CKMLCR Data</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_ML_DATA</CMPNAME>
+     <SCONAME>IT_CKMLHD</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>CKMLHD Data</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_ML_DATA</CMPNAME>
+     <SCONAME>IT_CKMLPR</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>CKMLPR Data</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>EXECUTE_PRICE_CHANGE</CMPNAME>
+     <SCONAME>IV_ACTIONMODE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Char 20</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_PROCESS_CHANGE_PRICE</CMPNAME>
+     <SCONAME>IV_ACTIONMODE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Char 20</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

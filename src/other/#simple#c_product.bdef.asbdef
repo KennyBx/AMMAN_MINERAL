@@ -1,0 +1,372 @@
+unmanaged implementation in class /simple/bp_product unique;
+
+define behavior for /SIMPLE/C_Product alias Product
+late numbering // in place
+//lock master
+//etag master <field_name>
+{
+  create;
+  association _ProductInspectionText { create; }
+  association _ProductUnitsOfMeasure { create; }
+  association _ProductBasicText { create; }
+  association _Description { create; }
+  association _Plant { create; }
+  association _ProductProcurement { create; }
+  association _ProductPurchaseText { create; }
+  association _ProductQualityMgmt { create; }
+  association _ProductSales { create; }
+  association _SalesDelivery { create; }
+  association _ProductSalesTax { create; }
+  association _ProductStorage { create; }
+  association _Valuation { create; }
+  association _ProductWareHouse { create; }
+  association _Classification { create; }
+  association _RevisionLevel { create; }
+  association _Prdextendwarehouse { create; }
+
+}
+
+define behavior for /SIMPLE/C_ProductRevisionLevel alias RevisionLevel
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+}
+
+define behavior for /SIMPLE/C_PrdInspectionText alias PrdInspectionText
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+  field ( readonly : update ) longText;
+}
+
+define behavior for /SIMPLE/C_PrdUnitsOfMeasure alias PrdtUnitsOfMeasure
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+  association _InternationalArticleNumber { create; }
+}
+
+define behavior for /SIMPLE/C_PrdUnitsOfMeasureEAN alias PrdUnitsOfMeasureEAN
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+}
+
+define behavior for /SIMPLE/C_ProductBasicText alias ProductBasicText
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+  field ( readonly : update ) longText;
+}
+
+define behavior for /SIMPLE/C_ProductDescription alias ProductDescription
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+}
+
+define behavior for /SIMPLE/C_ProductPlant alias ProductPlant
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+  association _InspTypeSttng { create; }
+  association _ProductPlantCosting { create; }
+  association _ProductPlantForecast { create; }
+  association _ProdPlantInternationalTrade { create; }
+  association _PlantMRPArea { create; }
+  association _ProductPlantProcurement { create; }
+  association _PlantQualityMgmt { create; }
+  association _PlantSales { create; }
+  association _PlantStorage { create; }
+  association _PlantText { create; }
+  association _ProdPlntFcstParam { create; }
+  association _StorageLocation { create; }
+  association _ProductSupplyPlanning { create; }
+  association _ProductWorkScheduling { create; }
+  association _ProductResourceTool { create; }
+}
+
+define behavior for /SIMPLE/C_PrdInspTypeSttng alias PrdInspTypeSttng
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+}
+
+define behavior for /SIMPLE/C_PrdPRT alias ProductResourceTool
+late numbering
+{
+  create;
+}
+
+define behavior for /SIMPLE/C_PrdPlantCosting alias PrdPlantCosting
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+}
+
+define behavior for /SIMPLE/C_PrdPlantForecasting alias PrdPlantForecasting
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+}
+
+define behavior for /SIMPLE/C_PrdPlantIntlTrd alias PrdPlantIntlTrd
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+}
+
+define behavior for /SIMPLE/C_PrdPlantMRPArea alias PrdPlantMRPArea
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+}
+
+define behavior for /SIMPLE/C_PrdPlantProcurement alias PrdPlantProcurement
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+}
+
+define behavior for /SIMPLE/C_PrdPlantQualityMgmt alias PrdPlantQualityMgmt
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+}
+
+define behavior for /SIMPLE/C_PrdPlantSales alias PrdPlantSales
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+}
+
+define behavior for /SIMPLE/C_PrdPlantStorage alias PrdPlantStorage
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+}
+
+define behavior for /SIMPLE/C_PrdPlantText alias PrdPlantText
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+  field ( readonly : update ) longText;
+}
+
+define behavior for /SIMPLE/C_PrdPlntFcstParams alias PrdPlntFcstParams
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+}
+
+define behavior for /SIMPLE/C_PrdStorageLocation alias PrdStorageLocation
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+}
+
+define behavior for /SIMPLE/C_PrdSupplyPlanning alias PrdSupplyPlanning
+//late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+}
+
+define behavior for /SIMPLE/C_PrdWorkScheduling alias PrdWorkScheduling
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+}
+
+define behavior for /SIMPLE/C_ProductProcurement alias ProductProcurement
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+}
+
+define behavior for /SIMPLE/C_ProductPurchaseText alias ProductPurchaseText
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+  field ( readonly : update ) LongText;
+}
+
+define behavior for /SIMPLE/C_ProductQualityMgmt alias ProductQualityMgmt
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+}
+
+define behavior for /SIMPLE/C_ProductSales alias ProductSales
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+}
+
+define behavior for /SIMPLE/C_ProductSalesDelivery alias ProductSalesDelivery
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+  association _SalesText { create; }
+}
+
+define behavior for /SIMPLE/C_ProductSalesText alias ProductSalesText
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+  field ( readonly : update ) LongText;
+}
+
+define behavior for /SIMPLE/C_ProductSalesTax alias ProductSalesTax
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+}
+
+define behavior for /SIMPLE/C_ProductStorage alias ProductStorage
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+}
+
+define behavior for /SIMPLE/C_ProductValuation alias ProductValuation
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+  field ( readonly : update ) priceChangeDocument;
+  field ( readonly : update ) postingDate;
+  association _ValuationAccount { create; }
+  association _MLAccount { create; }
+  association _MLPrices { create; }
+}
+
+define behavior for /SIMPLE/C_PrdValuationAccount alias PrdValuationAccount
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+}
+
+define behavior for /SIMPLE/C_ProductMLAccount alias ProductMLAccount
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+}
+
+define behavior for /SIMPLE/C_ProductMLPrices alias ProductMLPrices
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+}
+
+define behavior for /SIMPLE/C_ProductWareHouse alias ProductWareHouse
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+  field ( readonly : update ) loadingQuantity1;
+  field ( readonly : update ) loadingQuantity2;
+  field ( readonly : update ) loadingQuantity3;
+  association _ProductStorageType { create; }
+}
+
+define behavior for /SIMPLE/C_ProductStorageType alias ProductStorageType
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+}
+
+define behavior for /SIMPLE/C_PrdClassification alias Classification
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+  association _Characteristic { create; }
+
+}
+
+define behavior for /SIMPLE/C_PrdCharacteristic alias Characteristic
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+  field ( readonly : update ) charcValue;
+}
+
+define behavior for /SIMPLE/C_Prdextendwarehouse alias Prdextendwarehouse
+late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+  //field ( readonly : update ) charcValue;
+}

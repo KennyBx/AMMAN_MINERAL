@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/SIMPLE/CL_MULTIPLESEARCHHELP</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>multiplesearchhelp</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>DYNAMIC_FILTER</CMPNAME>
+     <SCONAME>IT_DFIES_TAB</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Table Type for Structure DFIES</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>DYNAMIC_MERGE_DATA</CMPNAME>
+     <SCONAME>IT_DFIES_TAB</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Table Type for Structure DFIES</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>DYNAMIC_MERGE_DATA</CMPNAME>
+     <SCONAME>IV_DOMNAME_INPUT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Domain name</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_DYNAMICF4</CMPNAME>
+     <SCONAME>CS_DATA</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Single-Character Flag</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_DYNAMICF4_MULTIPLE_SH</CMPNAME>
+     <SCONAME>CT_SHLP_TAB</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>List of Alternative Elementary Search Helps</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_DYNAMICF4_MULTIPLE_SH</CMPNAME>
+     <SCONAME>CV_TABNAME_TEXT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Table Name</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

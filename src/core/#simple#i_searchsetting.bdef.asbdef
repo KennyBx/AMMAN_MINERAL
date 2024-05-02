@@ -1,0 +1,24 @@
+unmanaged implementation in class /simple/bp_searchsetting unique;
+
+define behavior for /SIMPLE/I_SearchSetting alias SearchSetting
+{
+  create;
+  association _SearchFields { create; }
+  association _SearchResults { create; }
+}
+
+define behavior for /SIMPLE/I_SearchField alias SearchField
+{
+  create;
+  association _SearchValues { create; }
+}
+
+define behavior for /SIMPLE/I_SearchValue alias SearchValue
+{
+  create;
+}
+
+define behavior for /SIMPLE/I_SearchResult alias SearchResult
+{
+  create;
+}

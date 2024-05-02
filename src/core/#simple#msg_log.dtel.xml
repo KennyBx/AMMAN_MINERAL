@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>/SIMPLE/MSG_LOG</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>/SIMPLE/MSG_LOG</DOMNAME>
+    <HEADLEN>55</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>20</SCRLEN2>
+    <SCRLEN3>40</SCRLEN3>
+    <DDTEXT>Message Log</DDTEXT>
+    <REPTEXT>MESSAGE_LOG</REPTEXT>
+    <SCRTEXT_S>MSG_LOG</SCRTEXT_S>
+    <SCRTEXT_M>MSG_LOG</SCRTEXT_M>
+    <SCRTEXT_L>MESSAGE_LOG</SCRTEXT_L>
+    <DTELMASTER>E</DTELMASTER>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>J</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>J</DDLANGUAGE>
+     <DDTEXT>Message Log</DDTEXT>
+     <REPTEXT>MSG LOG</REPTEXT>
+     <SCRTEXT_S>MSGL</SCRTEXT_S>
+     <SCRTEXT_M>MSGL</SCRTEXT_M>
+     <SCRTEXT_L>MSGLOG</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

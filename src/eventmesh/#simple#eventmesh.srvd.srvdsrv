@@ -1,0 +1,4 @@
+@EndUserText.label: 'Event Mesh Service Definition'
+define service /SIMPLE/EVENTMESH {
+  expose /SIMPLE/C_Event_Mesh as EventMesh;
+}

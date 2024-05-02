@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_INTF" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOINTERF>
+    <CLSNAME>/SIMPLE/IF_MDG_API</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>MDG APIs</DESCRIPT>
+    <EXPOSURE>2</EXPOSURE>
+    <STATE>1</STATE>
+    <UNICODE>X</UNICODE>
+   </VSEOINTERF>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>CREATE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>create object</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SEARCH</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>search object</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>UPDATE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>update object</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>VERIFY_DATA</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Verify data</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE</CMPNAME>
+     <SCONAME>ET_MESSAGE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Return table</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE</CMPNAME>
+     <SCONAME>IS_DEEP_DATA</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>deep data</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE</CMPNAME>
+     <SCONAME>IT_KEY_TAB</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>table for name value pairs</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE</CMPNAME>
+     <SCONAME>IV_MODE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>V - Validate/C - Commit</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SEARCH</CMPNAME>
+     <SCONAME>ET_MESSAGE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Return table</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SEARCH</CMPNAME>
+     <SCONAME>IS_DEEP_DATA</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>MGW Entry Data Provider</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SEARCH</CMPNAME>
+     <SCONAME>IT_KEY_TAB</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>table for name value pairs</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>UPDATE</CMPNAME>
+     <SCONAME>EO_DEEP_ENTITY</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>return data</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>UPDATE</CMPNAME>
+     <SCONAME>ET_MESSAGE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Return table</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>UPDATE</CMPNAME>
+     <SCONAME>IS_DEEP_DATA</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Deep data</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>UPDATE</CMPNAME>
+     <SCONAME>IT_KEY_TAB</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>table for name value pairs</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>VERIFY_DATA</CMPNAME>
+     <SCONAME>ET_MESSAGE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Return table</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>VERIFY_DATA</CMPNAME>
+     <SCONAME>IV_ACTION</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>G/L Account Master Record: Action for Data Record</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

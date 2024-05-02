@@ -1,0 +1,21 @@
+<xsl:transform xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:sap="http://www.sap.com/sapxsl" xmlns:f="FCT" exclude-result-prefixes="f" version="1.0">
+
+  <sap:external-function class="/SIMPLE/CL_JSON_UTILITY" kind="class" method="CONVERT_FNAME_CASE" name="f:toCC">
+    <sap:argument param="IM_V_FNAME"   type="string"/>
+    <sap:argument param="IM_V_CASE"    type="string"/>
+    <sap:result   param="RT_V_FNAME"   type="string"/>
+  </sap:external-function>
+
+  <xsl:param name="MODE"/>
+
+  <xsl:template match="@* | node()">
+    <xsl:copy>
+      <xsl:apply-templates select="@* | node()"/>
+    </xsl:copy>
+  </xsl:template>
+  <xsl:template match="@*">
+    <xsl:attribute name="name">
+      <xsl:value-of select="f: toCC( string( . ), string( $MODE ) )"/>
+    </xsl:attribute>
+  </xsl:template>
+</xsl:transform>

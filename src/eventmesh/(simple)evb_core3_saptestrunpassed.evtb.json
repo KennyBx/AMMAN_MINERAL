@@ -1,0 +1,20 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "SimpleMDG - Event Mesh",
+    "originalLanguage": "en"
+  },
+  "producerNamespace": "s4",
+  "producer": "P09245CA992B73CF1DB70E0E0E22324BE",
+  "producerVersion": "0001",
+  "boName": "core3",
+  "boOperation": "SAPTestRunPassed",
+  "producerType": "s4.core3.SAPTestRunPassed.v*",
+  "events": [
+    {
+      "eventVersion": "0001",
+      "entityName": "/SIMPLE/C_EVENT_MESH",
+      "entityEventName": "CORE3_SAPTESTRUNPASSED"
+    }
+  ]
+}
