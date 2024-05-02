@@ -1,0 +1,61 @@
+@AbapCatalog.sqlViewName: '/SIMPLE/IFLOCADD'
+@AbapCatalog.compiler.compareFilter: true
+@AbapCatalog.preserveKey: true
+@AccessControl.authorizationCheck: #CHECK
+@EndUserText.label: 'Functional Location Address'
+define view /SIMPLE/I_FLOCADDRESS
+  as select from adrc
+{
+  key addrnumber  as AddressNumber,
+  key date_from   as DateFrom,
+  key nation      as AddressVersion,
+      date_to     as DateTo,
+      title       as Title,
+      name1       as Name1,
+      name2       as Name2,
+      name3       as Name3,
+      name4       as Name4,
+      name_text   as ConvertedName,
+      building    as BuildingCode,
+      roomnumber  as Room,
+      floor       as Floor,
+      streetcode  as StreetCode,
+      streetabbr  as StreetAbbreviation,
+      house_num1  as HouseNumber,
+      house_num2  as Supplement,
+      house_num3  as HouseNumberRange,
+      str_suppl1  as Street2,
+      str_suppl2  as Street3,
+      str_suppl3  as Street4,
+      location    as Street5,
+      post_code1  as PostalCode,
+      city1       as City,
+      city2       as District,
+      city_code   as CityCode,
+      country     as Country,
+      region      as Region,
+      time_zone   as Time_Zone,
+      po_box      as POBox,
+      post_code2  as POBoxPostalCode,
+      post_code3  as CompanyPostalCode,
+      langu       as Language,
+      tel_number  as Telephone,
+      tel_extens  as TelephoneExtension,
+      fax_number  as Fax,
+      fax_extens  as FaxExtension,
+      flagcomm2   as TelephoneMethod,
+      flagcomm3   as FaxMethod,
+      flagcomm4   as Teletex,
+      flagcomm5   as Telex,
+      flagcomm6   as EMailMethod,
+      flagcomm7   as RMailMethod,
+      flagcomm8   as X400Method,
+      flagcomm9   as RFCMethod,
+      flagcomm10  as PrinterMethod,
+      flagcomm11  as SSFMethod,
+      flagcomm12  as URIFTPMethod,
+      flagcomm13  as PagerMethod,
+
+      langu       as CorrespondenceLanguage,
+      adrc.nation as Nation
+}

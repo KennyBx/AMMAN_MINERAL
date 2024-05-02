@@ -1,0 +1,55 @@
+unmanaged implementation in class /simple/bp_multiplesearchhelp unique;
+
+define behavior for /SIMPLE/I_MultipleSearchHelp alias MultipleSearch
+//late numbering
+//lock master
+//etag master <field_name>
+{
+  create;
+  //update;
+  //delete;
+  association _SearchRequest { create; }
+}
+
+define behavior for /SIMPLE/I_SearchHelpRequest alias SearchRequest
+//late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+  //update;
+  //delete;
+  association _SearchHelp { create; }
+  association _SearchResult { create; }
+}
+
+define behavior for /SIMPLE/I_SearchHelp alias SearchHelp
+//late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+  //update;
+  //delete;
+  association _SearchField { create; }
+}
+
+define behavior for /SIMPLE/I_SearchHelpField alias SearchField
+//late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+  //update;
+  //delete;
+}
+
+define behavior for /SIMPLE/I_SearchHelpResult alias SearchResult
+//late numbering
+//lock dependent by <association>
+//etag master <field_name>
+{
+  create;
+  //update;
+  //delete;
+}

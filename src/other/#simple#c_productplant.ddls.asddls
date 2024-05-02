@@ -1,0 +1,177 @@
+@AbapCatalog.sqlViewName: '/SIMPLE/CPRDP'
+@AbapCatalog.compiler.compareFilter: true
+@AbapCatalog.preserveKey: true
+@AccessControl.authorizationCheck: #CHECK
+@EndUserText.label: 'ProductPlant'
+define view /SIMPLE/C_ProductPlant
+  as select from /SIMPLE/I_ProductPlant
+  composition [0..*] of /SIMPLE/C_PrdStorageLocation  as _StorageLocation
+  composition [0..1] of /SIMPLE/C_PrdPlantProcurement as _ProductPlantProcurement
+  composition [0..1] of /SIMPLE/C_PrdWorkScheduling   as _ProductWorkScheduling
+  composition [0..1] of /SIMPLE/C_PrdSupplyPlanning   as _ProductSupplyPlanning
+  composition [0..1] of /SIMPLE/C_PrdPlantIntlTrd     as _ProdPlantInternationalTrade
+  composition [0..1] of /SIMPLE/C_PrdPlantCosting     as _ProductPlantCosting
+  composition [0..1] of /SIMPLE/C_PrdPlantForecasting as _ProductPlantForecast
+  composition [0..1] of /SIMPLE/C_PrdPlantQualityMgmt as _PlantQualityMgmt
+  composition [0..1] of /SIMPLE/C_PrdPlantSales       as _PlantSales
+  composition [0..1] of /SIMPLE/C_PrdPlantStorage     as _PlantStorage
+  composition [0..1] of /SIMPLE/C_PrdPlantText        as _PlantText
+  composition [0..*] of /SIMPLE/C_PrdPlantMRPArea     as _PlantMRPArea
+  composition [0..*] of /SIMPLE/C_PrdInspTypeSttng    as _InspTypeSttng
+  composition [0..1] of /SIMPLE/C_PrdPlntFcstParams   as _ProdPlntFcstParam
+  composition [0..1] of /SIMPLE/C_PrdPRT              as _ProductResourceTool
+  association to parent /SIMPLE/C_Product             as _Product on $projection.product = _Product.product
+
+{
+  key Product                                                                   as product,
+  key Plant                                                                     as plant,
+      PurchasingGroup                                                           as purchasingGroup,
+      CountryOfOrigin                                                           as countryOfOrigin,
+      RegionOfOrigin                                                            as regionOfOrigin,
+      ProductionInvtryManagedLoc                                                as productionInvtryManagedLoc,
+      ProfileCode                                                               as profileCode,
+      ProfileValidityStartDate                                                  as profileValidityStartDate,
+      AvailabilityCheckType                                                     as availabilityCheckType,
+      FiscalYearVariant                                                         as fiscalYearVariant,
+      PeriodType                                                                as periodType,
+      ProfitCenter                                                              as profitCenter,
+      Commodity                                                                 as commodity,
+      GoodsReceiptDuration                                                      as goodsReceiptDuration,
+      MaintenanceStatusName                                                     as maintenanceStatusName,
+      IsMarkedForDeletion                                                       as isMarkedForDeletion,
+      MRPType                                                                   as mrpType,
+      MRPResponsible                                                            as mrpResponsible,
+      ABCIndicator                                                              as abcIndicator,
+      MinimumLotSizeQuantity                                                    as minimumLotSizeQuantity,
+      MaximumLotSizeQuantity                                                    as maximumLotSizeQuantity,
+      FixedLotSizeQuantity                                                      as fixedLotSizeQuantity,
+      ConsumptionTaxCtrlCode                                                    as consumptionTaxCtrlCode,
+      IsCoProduct                                                               as isCoProduct,
+      ProductIsConfigurable                                                     as productIsConfigurable,
+      StockDeterminationGroup                                                   as stockDeterminationGroup,
+      StockInTransferQuantity                                                   as stockInTransferQuantity,
+      StockInTransitQuantity                                                    as stockInTransitQuantity,
+      HasPostToInspectionStock                                                  as hasPostToInspectionStock,
+      IsBatchManagementRequired                                                 as isBatchManagementRequired,
+      SerialNumberProfile                                                       as serialNumberProfile,
+      IsNegativeStockAllowed                                                    as isNegativeStockAllowed,
+      GoodsReceiptBlockedStockQty                                               as goodsReceiptBlockedStockQty,
+      HasConsignmentCtrl                                                        as hasConsignmentCtrl,
+      FiscalYearCurrentPeriod                                                   as fiscalYearCurrentPeriod,
+      FiscalMonthCurrentPeriod                                                  as fiscalMonthCurrentPeriod,
+      ProcurementType                                                           as procurementType,
+      IsInternalBatchManaged                                                    as isInternalBatchManaged,
+      ProductCFOPCategory                                                       as productCFOPCategory,
+      ProductIsExciseTaxRelevant                                                as productIsExciseTaxRelevant,
+      ReplacementPart                                                           as replacementPart,
+      SetupTime                                                                 as setupTime,
+      ProcessingTime                                                            as processingTime,
+      BaseQty                                                                   as baseQty,
+      IUIDRelevant                                                              as iuidRelevant,
+      ExternalAllocationOfUII                                                   as externalAllocationOfUII,
+      IUIDType                                                                  as iuidType,
+      JITSchedIndicator                                                         as jitSchedIndicator,
+      LSIndependentCosts                                                        as lsIndependentCosts,
+      MRPAreasExist                                                             as mrpAreasExist,
+      BatchEntry                                                                as batchEntry,
+      VersionIndicator                                                          as versionIndicator,
+      AdvancedPlanningIndicator                                                 as advancedPlanningIndicator,
+      PlanExplosion                                                             as planExplosion,
+      Priority                                                                  as priority,
+      PPPlngProcedure                                                           as ppPlngProcedure,
+      PlanningGroup                                                             as planningGroup,
+      ProdStorageCost                                                           as prodStorageCost,
+      SafetyStockPenalty                                                        as safetyStockPenalty,
+      ProductHeuristic                                                          as productHeuristic,
+      PlanningPackage                                                           as planningPackage,
+      IntSourcingProfile                                                        as intSourcingProfile,
+      ConversionRule                                                            as conversionRule,
+      AvoidAlerts                                                               as avoidAlerts,
+      PeggingStrategy                                                           as peggingStrategy,
+      MinPassingAmt                                                             as minPassingAmt,
+      FixedPegging                                                              as fixedPegging,
+      ProposedStrategy                                                          as proposedStrategy,
+      cast (AlertThresholdForEarliness as cmd_prd_dm_pegging_futur_alert)       as alertThresholdForEarliness,
+      cast (AlertThresholdForLateness as cmd_prd_dm_pegging_past_alert)         as alertThresholdForLateness,
+      ResNetworkName                                                            as resNetworkName,
+      ProductAlerts                                                             as productAlerts,
+      UseTotalReceipts                                                          as useTotalReceipts,
+      UseTotalStock                                                             as useTotalStock,
+      LotSizeUnit                                                               as lotSizeUnit,
+      cast (TargetDaySupply as cmd_prd_target_dur_n)                            as targetDaySupply,
+      PlanningCalendar                                                          as planningCalendar,
+      cast (ReorderDaySupply as cmd_prd_reord_dur_n)                            as reorderDaySupply,
+      ReplenishmentLeadTime                                                     as replenishmentLeadTime,
+      cast (GrProcessngTime as cmd_prd_good_rcpt_proc_time_n preserving type )  as grProcessngTime,
+      cast (GIProcessngTime as cmd_prd_good_issue_proc_time_n preserving type ) as giProcessngTime,
+      GrHandlgCapCons                                                           as grHandlgCapCons,
+      UoMGrHandlgCap                                                            as uomGrHandlgCap,
+      GIHandlgCapCons                                                           as giHandlgCapCons,
+      UomGIHandlgCap                                                            as uomGIHandlgCap,
+      ShelfLife                                                                 as shelfLife,
+      cast (LocShelfLife as cmd_prd_shelf_life_dur_l_n)                         as locShelfLife,
+      cast(LocMaturTime as cmd_prd_maturity_dur_l_n)                            as locMaturTime,
+      cast(MinShelfLife as cmd_prd_shelf_life_req_min_n)                        as minShelfLife,
+      cast(MaxShelfLife as cmd_prd_shelf_life_req_max_n)                        as maxShelfLife,
+      CCFixed                                                                   as ccFixed,
+      TimeUnit                                                                  as timeUnit,
+      SegmentationStrategy                                                      as segmentationStrategy,
+      SortStkBasedOnSeg                                                         as sortStkBasedOnSeg,
+      DefaultStockSegment                                                       as defaultStockSegment,
+      InspectionSetupInd                                                        as inspectionSetupInd,
+      DoNotCost                                                                 as doNotCost,
+      VarianceKey                                                               as varianceKey,
+      AlternativeBOM                                                            as alternativeBOM,
+      BOMUsage                                                                  as bomUsage,
+      TaskListGroup                                                             as taskListGroup,
+      GroupCounter                                                              as groupCounter,
+      SpecialProcuremCosting                                                    as specialProcuremCosting,
+      CostingLotSize                                                            as costingLotSize,
+      FixedPriceCoProduct                                                       as fixedPriceCoProduct,
+      ProductVersion                                                            as productVersion,
+      ConfigurableProduct                                                       as configurableProduct,
+      MaterialFreightGroup                                                      as materialFreightGroup,
+      ProductIsCriticalPrt                                                      as productIsCriticalPrt,
+      ProductionSupervisor                                                      as productionSupervisor,
+      ProductionSchedulingProfile                                               as productionSchedulingProfile,
+      ProductLogisticsHandlingGroup                                             as productLogisticsHandlingGroup,
+      DistrCntrDistributionProfile                                              as distrCntrDistributionProfile,
+      GoodsIssueUnit                                                            as goodsIssueUnit,
+      MaterialBaseQuantity                                                      as materialBaseQuantity,
+      UnlimitedOverDelivIsAllowed                                               as unlimitedOverDelivIsAllowed,
+      ProductProductionQuantityUnit                                             as productProductionQuantityUnit,
+      TransitionMatrixProductsGroup                                             as transitionMatrixProductsGroup,
+      OrderChangeManagementProfile                                              as orderChangeManagementProfile,
+      SetupAndTeardownTime                                                      as setupAndTeardownTime,
+      ProductProcessingTime                                                     as productProcessingTime,
+      TransitionTime                                                            as transitionTime,
+      ProductUnitGroup                                                          as productUnitGroup,
+
+      // Update 12/07/2023 - Martin - Product Planning
+      PlanningProduct                                                           as planningProduct,
+      PlanningPlant                                                             as planningPlant,
+      PlngConvFactor                                                            as plngConvFactor,
+      // Update 12/07/2023 - Martin - Product Planning
+
+      /* SimpleMDG specific fields for integration */
+      cast( '' as abap.char( 10 ) )                                             as action,
+      cast( '' as abap.char( 999 ) )                                            as mdgMarkForChange,
+
+      /* Associations */
+      _StorageLocation,
+      _ProductPlantProcurement,
+      _ProductWorkScheduling,
+      _ProductSupplyPlanning,
+      _ProdPlantInternationalTrade,
+      _ProductPlantCosting,
+      _ProductPlantForecast,
+      _PlantQualityMgmt,
+      _PlantSales,
+      _PlantStorage,
+      _PlantText,
+      _PlantMRPArea,
+      _InspTypeSttng,
+      _ProdPlntFcstParam,
+      _Product,
+      _ProductResourceTool
+}

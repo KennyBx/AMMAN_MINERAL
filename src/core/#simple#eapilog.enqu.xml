@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_ENQU" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD25V>
+    <VIEWNAME>/SIMPLE/EAPILOG</VIEWNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <AGGTYPE>E</AGGTYPE>
+    <ROOTTAB>/SIMPLE/API_LOG</ROOTTAB>
+    <DDTEXT>Lock object for table /SIMPLE/APILOG</DDTEXT>
+   </DD25V>
+   <DD26E_TABLE>
+    <DD26E>
+     <VIEWNAME>/SIMPLE/EAPILOG</VIEWNAME>
+     <TABNAME>/SIMPLE/API_LOG</TABNAME>
+     <TABPOS>0001</TABPOS>
+     <FORTABNAME>/SIMPLE/API_LOG</FORTABNAME>
+     <ENQMODE>E</ENQMODE>
+    </DD26E>
+   </DD26E_TABLE>
+   <DD27P_TABLE>
+    <DD27P>
+     <VIEWNAME>/SIMPLE/EAPILOG</VIEWNAME>
+     <OBJPOS>0001</OBJPOS>
+     <VIEWFIELD>CLIENT</VIEWFIELD>
+     <TABNAME>/SIMPLE/API_LOG</TABNAME>
+     <FIELDNAME>CLIENT</FIELDNAME>
+     <KEYFLAG>X</KEYFLAG>
+     <ENQMODE>E</ENQMODE>
+    </DD27P>
+    <DD27P>
+     <VIEWNAME>/SIMPLE/EAPILOG</VIEWNAME>
+     <OBJPOS>0002</OBJPOS>
+     <VIEWFIELD>MDGLOGID</VIEWFIELD>
+     <TABNAME>/SIMPLE/API_LOG</TABNAME>
+     <FIELDNAME>MDGLOGID</FIELDNAME>
+     <KEYFLAG>X</KEYFLAG>
+     <ENQMODE>E</ENQMODE>
+     <LOWERCASE>X</LOWERCASE>
+    </DD27P>
+   </DD27P_TABLE>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,7 @@
+@EndUserText.label: 'Search Setting'
+define service /SIMPLE/SearchSetting {
+  expose /SIMPLE/I_SearchSetting as SearchSetting;
+  expose /SIMPLE/I_SearchField as SearchField;
+  expose /SIMPLE/I_SearchValue as SearchValue;
+  expose /SIMPLE/I_SearchResult as SearchResult;
+}

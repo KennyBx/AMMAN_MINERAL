@@ -1,0 +1,14 @@
+unmanaged implementation in class /simple/bp_c_measuringpoint unique;
+
+define behavior for /SIMPLE/C_MeasuringPoint alias MeasuringPoint
+late numbering
+//lock master
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field( readonly : update ) equipment;
+  field( readonly : update ) functionalLocation;
+
+}

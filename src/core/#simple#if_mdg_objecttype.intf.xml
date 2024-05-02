@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_INTF" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOINTERF>
+    <CLSNAME>/SIMPLE/IF_MDG_OBJECTTYPE</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>SimpleMDG Interface for ObjectType</DESCRIPT>
+    <EXPOSURE>2</EXPOSURE>
+    <STATE>1</STATE>
+    <UNICODE>X</UNICODE>
+   </VSEOINTERF>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>CREATE_OBJ</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>API to activate new master data OBJ</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>DELETE_OBJ</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>API to delete a master data OBJ</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>DUPLICATION_CHECK</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>API to check duplication of a master data OBJ during submit</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SEARCH_MASTERDATA</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>API to search this master data</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>TEST_RUN</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>API to trigger test run of a master data OBJ during submit</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>UPDATE_OBJ</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>API to update a master data OBJ</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

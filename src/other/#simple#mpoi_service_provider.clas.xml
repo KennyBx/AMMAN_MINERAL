@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/SIMPLE/MPOI_SERVICE_PROVIDER</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>PM Measuring point service provider</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>CONVERT_F2P</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Convert floating point to pack decimal</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GO_OBJECT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>PM Measuring point service provider</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GS_CLASS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Set Class</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GS_LOG</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>API LOG</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GS_UPDATE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Measuring Point (Table)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GTY_MP_MAPPING</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>SimpleMDG Measuring Point BAPI API</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GT_MESSAGE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Return table</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GT_RETURN</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Return table</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GV_EXTERNAL_LOG_NO</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Application Log: External ID</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GV_LOG_HANDLE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Application Log: Log Handle</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GV_MDG</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>indicator for MDG call</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GV_TESTRUN</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>indicator for testrun call</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>_CHANGE_MPOI</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Change measuring point</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>_CREATE_MPOI</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Create measuring point</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>_DELETE_MPOI</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Delete measuring point</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>_INIT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Initiation</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>_MAP_RESPONE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Map response</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>_SAVE_LOG</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Save log table</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CONVERT_F2P</CMPNAME>
+     <SCONAME>IV_DECIMALS</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Number of Decimal Places for Number Display</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONVERT_F2P</CMPNAME>
+     <SCONAME>IV_FLTPS</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Floating point input</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_INSTANCE</CMPNAME>
+     <SCONAME>RO_OBJECT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>PM Measuring point service provider</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>UPDATE_LOG_TABLE</CMPNAME>
+     <SCONAME>IV_STATUS</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>MDG Status</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>UPDATE_LOG_TABLE</CMPNAME>
+     <SCONAME>IV_STEP</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>API Log step</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>
