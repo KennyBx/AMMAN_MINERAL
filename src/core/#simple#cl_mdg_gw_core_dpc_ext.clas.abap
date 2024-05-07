@@ -8246,7 +8246,7 @@ CLASS /SIMPLE/CL_MDG_GW_CORE_DPC_EXT IMPLEMENTATION.
       LOOP AT it_message[] INTO DATA(ls_msg) WHERE type IS NOT INITIAL.
         IF ls_msg-type = 'E' AND ls_msg-number = '000' AND ls_msg-message_v1 IS INITIAL.
           DATA(lv_msg) = ls_msg-message.
-        ELSEIF ls_msg-type = 'E' and ls_msg-id = '00' AND ls_msg-number = '000' AND ls_msg-message_v1 IS NOT INITIAL.
+        ELSEIF ls_msg-type = 'E' and ls_msg-id IS INITIAL AND ls_msg-number = '000' AND ls_msg-message_v1 IS NOT INITIAL.
           lv_msg = ls_msg-message_v1.
         ELSE.
           TRY.
