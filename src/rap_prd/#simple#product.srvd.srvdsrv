@@ -1,0 +1,43 @@
+@EndUserText.label: 'Product service definition'
+define service /SIMPLE/Product {
+  expose /SIMPLE/C_Product as Product;
+  expose /SIMPLE/C_ProductDescription as Description;
+  expose /SIMPLE/C_ProductPlant as Plant;
+  expose /SIMPLE/C_ProductSalesDelivery as SalesDelivery;
+  expose /SIMPLE/C_ProductSalesTax as ProductSalesTax;
+  expose /SIMPLE/C_ProductSales as ProductSales;
+  expose /SIMPLE/C_ProductQualityMgmt as ProductQualityMgmt;
+  expose /SIMPLE/C_ProductProcurement as ProductProcurement;
+  expose /SIMPLE/C_ProductBasicText as ProductBasicText;
+  expose /SIMPLE/C_PrdUnitsOfMeasure as ProductUnitsOfMeasure;
+  expose /SIMPLE/C_ProductStorage as ProductStorage;
+  expose /SIMPLE/C_PrdInspectionText as ProductInspectionText;
+  expose /SIMPLE/C_ProductPurchaseText as ProductPurchaseText;
+  expose /SIMPLE/C_ProductValuation as Valuation;
+  expose /SIMPLE/C_ProductWareHouse as ProductWareHouse;
+  expose /SIMPLE/C_PrdStorageLocation as StorageLocation;
+  expose /SIMPLE/C_PrdPlantProcurement as ProductPlantProcurement;
+  expose /SIMPLE/C_PrdWorkScheduling as ProductWorkScheduling;
+  expose /SIMPLE/C_PrdSupplyPlanning as ProductSupplyPlanning;
+  expose /SIMPLE/C_PrdPlantIntlTrd as ProdPlantInternationalTrade;
+  expose /SIMPLE/C_PrdPlantCosting as ProductPlantCosting;
+  expose /SIMPLE/C_PrdPlantForecasting as ProductPlantForecast;
+  expose /SIMPLE/C_PrdPlantQualityMgmt as PlantQualityMgmt;
+  expose /SIMPLE/C_PrdPlantSales as PlantSales;
+  expose /SIMPLE/C_PrdPlantStorage as PlantStorage;
+  expose /SIMPLE/C_PrdPlantText as PlantText;
+  expose /SIMPLE/C_PrdPlantMRPArea as PlantMRPArea;
+  expose /SIMPLE/C_PrdInspTypeSttng as InspTypeSttng;
+  expose /SIMPLE/C_PrdPlntFcstParams as ProdPlntFcstParam;
+  expose /SIMPLE/C_ProductSalesText as SalesText;
+  expose /SIMPLE/C_PrdUnitsOfMeasureEAN as ProductUnitsOfMeasureEAN;
+  expose /SIMPLE/C_PrdValuationAccount as ValuationAccount;
+  expose /SIMPLE/C_ProductMLAccount as MLAccount;
+  expose /SIMPLE/C_ProductMLPrices as MLPrices;
+  expose /SIMPLE/C_ProductStorageType as ProductStorageType;
+  expose /SIMPLE/C_PrdClassification as Classification;
+  expose /SIMPLE/C_PrdCharacteristic as Characteristic;
+  expose /SIMPLE/C_PrdPRT as ProductResourceTool;
+  expose /SIMPLE/C_ProductRevisionLevel as ProductRevisionLevel;
+  expose /SIMPLE/C_Prdextendwarehouse as Prdextendwarehouse;
+}
